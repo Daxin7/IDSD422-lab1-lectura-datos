@@ -29,5 +29,5 @@ ventas_por_region = ventas.groupby("region").sum("ventas") # es un dataframe
 
 print(ventas_por_region.head())
 
-print("Region con mayor cantidad de ventas: ",
-      ventas.loc[ventas["ventas"].idxmin(), "region"], "\n") # region con mayor cantidad de ventas
+print("Region con mayor cantidad de ventas: \n",
+      ventas_por_region.loc[ventas_por_region["ventas"].idxmax()]) # region con mayor cantidad de ventas
